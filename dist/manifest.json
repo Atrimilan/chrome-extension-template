@@ -1,0 +1,17 @@
+{
+    "name": "Instant Meaning",
+    "description": "Instantly search for a word meaning in Google",
+    "author": "Milan NICOLAS",
+    "version": "1.0.0",
+    "manifest_version": 3,
+    "permissions": [
+        "storage",
+        "activeTab"
+    ],
+    "action": {
+        "default_popup": "default_popup.html"
+    },
+    "background": {
+        "service_worker": "js/background.js"
+    }
+}
