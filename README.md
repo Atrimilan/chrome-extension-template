@@ -1,6 +1,8 @@
 # chrome-extension-template
 
 
+To load unpacked extension, select the dist folder (it's the one containing manifest.json).
+
 * `npm run dev` to compile assets files to dist files
 * `npm update` to update node modules
 
