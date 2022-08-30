@@ -1,11 +1,10 @@
 # chrome-extension-template
 
+To load unpacked extension, select the dist folder (the one containing manifest.json)
 
-To load unpacked extension, select the dist folder (the one containing manifest.json).
+* `npm ci` : install required node modules
+* `npm update` : update node modules
+* `npm run dev` : compile assets files to dist files
 
-* `npm run dev` to compile assets files to dist files
-* `npm update` to update node modules
-
-
-
-This template follows the tutorial of [Andrew Schmelyun](https://www.youtube.com/c/ASchmelyun) : https://youtu.be/kYl271X2LNA
+This template follows the tutorial of [Andrew Schmelyun](https://www.youtube.com/c/ASchmelyun), but it uses Chrome manifest v3 and Vue 3.
+Video link: https://youtu.be/kYl271X2LNA.
