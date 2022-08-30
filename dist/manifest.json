@@ -11,8 +11,6 @@
         "128": "./images/icons/icon_128.png"
     },
     "permissions": [
-        "storage",
-        "activeTab"
     ],
     "action": {
         "default_popup": "default_popup.html"
