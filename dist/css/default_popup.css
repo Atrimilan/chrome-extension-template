@@ -2,8 +2,24 @@ body {
   color: #ffffff;
   font-family: "Lato", Helvetica Neue, helvetica, sans-serif;
   background-color: #3e3e3e;
-  height: 500px;
-  width: 300px;
+  height: auto;
+  width: 200px;
   position: relative;
   margin: 10px;
+}
+
+.defaultButton, button.loadButton:active, button.loadButton {
+  padding: 5px;
+  border: 2px solid #676767;
+  border-radius: 5px;
+}
+
+button.loadButton {
+  background-color: rgb(230, 230, 230);
+  color: #676767;
+}
+
+button.loadButton:active {
+  background-color: #676767;
+  color: rgb(230, 230, 230);
 }

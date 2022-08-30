@@ -2,8 +2,29 @@ body {
     color: #ffffff;
     font-family: "Lato", Helvetica Neue, helvetica, sans-serif;
     background-color: #3e3e3e;
-    height: 500px;
-    width: 300px;
+    height: auto;
+    width: 200px;
     position: relative;
     margin: 10px;
+}
+
+$default-color: rgb(230, 230, 230);
+$darken-color: darken($default-color, 50);
+
+.defaultButton {
+    padding: 5px;
+    border: 2px solid $darken-color;
+    border-radius: 5px;
+}
+
+button.loadButton {
+    @extend .defaultButton;
+    background-color: $default-color;
+    color: $darken-color;
+}
+
+button.loadButton:active {
+    @extend .defaultButton;
+    background-color: $darken-color;
+    color: $default-color;
 }

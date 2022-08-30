@@ -1,33 +1,36 @@
 <template>
     <div class="wrapper">
         <h1>{{ welcome }}</h1>
-        <p>Have a nice day !</p>
-        <p>Time: {{ time }}</p>
+        <p>{{ description }}</p>
 
-        <button v-on:click="getTime()">Update time</button>
+        <hr />
+
+        <p>Time: {{ time }} s</p>
+        <button v-on:click="getTime()" class="loadButton">Get stored time</button>
     </div>
 </template>
 
 <script>
 export default {
-    name: "App",
+    name: "Popup",
     data() {
         return {
             welcome: "Hello Earth!",
-            time: "",
+            description: "Have a nice day!",
+            time: "-",
         };
     },
     methods: {
         getTime() {
+            // Get value from chrome storage
             chrome.storage.sync.get("time", ({ time }) => {
-                this.time = time;
+                this.time = time === undefined ? "-" : time;
             });
+            console.log("Time has been loaded from local Chrome storage.");
         },
     },
-    /* mounted() {
-        chrome.storage.sync.get("time", ({ time }) => {
-            this.time = time;
-        });
-    },*/
+    mounted() {
+        // Executed when the component is added to the DOM
+    },
 };
 </script>

@@ -17425,29 +17425,28 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  name: "App",
+  name: "Popup",
   data: function data() {
     return {
       welcome: "Hello Earth!",
-      time: ""
+      description: "Have a nice day!",
+      time: "-"
     };
   },
   methods: {
     getTime: function getTime() {
       var _this = this;
 
+      // Get value from chrome storage
       chrome.storage.sync.get("time", function (_ref) {
         var time = _ref.time;
-        _this.time = time;
+        _this.time = time === undefined ? "-" : time;
       });
+      console.log("Time has been loaded from local Chrome storage.");
     }
+  },
+  mounted: function mounted() {// Executed when the component is added to the DOM
   }
-  /* mounted() {
-      chrome.storage.sync.get("time", ({ time }) => {
-          this.time = time;
-      });
-  },*/
-
 });
 
 /***/ }),
@@ -17468,20 +17467,23 @@ var _hoisted_1 = {
   "class": "wrapper"
 };
 
-var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", null, "Have a nice day !", -1
+var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("hr", null, null, -1
 /* HOISTED */
 );
 
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h1", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($data.welcome), 1
   /* TEXT */
-  ), _hoisted_2, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", null, "Time: " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($data.time), 1
+  ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($data.description), 1
+  /* TEXT */
+  ), _hoisted_2, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", null, "Time: " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($data.time) + " s", 1
   /* TEXT */
   ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
     onClick: _cache[0] || (_cache[0] = function ($event) {
       return $options.getTime();
-    })
-  }, "Update time")]);
+    }),
+    "class": "loadButton"
+  }, "Get stored time")]);
 }
 
 /***/ }),
