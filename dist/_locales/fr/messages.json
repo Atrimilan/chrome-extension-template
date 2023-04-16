@@ -1,0 +1,10 @@
+{
+    "home_page_title": {
+        "message": "Bienvenue sur ce template !",
+        "description": "Le message de bienvenue affiché dans la popup"
+    },
+    "home_page_description": {
+        "message": "J'espère que vous l'appréciez",
+        "description": "Une description pour le message de bienvenue affiché dans la popup"
+    }
+}

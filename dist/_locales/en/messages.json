@@ -1,0 +1,10 @@
+{
+    "home_page_title": {
+        "message": "Welcome on this template!",
+        "description": "The welcome message displayed on the popup"
+    },
+    "home_page_description": {
+        "message": "I hope you like it",
+        "description": "A description for the welcome message displayed on the popup"
+    }
+}

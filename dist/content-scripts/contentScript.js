@@ -1,0 +1,1 @@
+console.log("This is executed from a content-script!");
