@@ -1,19 +1,24 @@
-# chrome-extension-template
+# Chrome extension template v2
 
-#### 1. Install dependencies and build
+This is a [manifest v3](https://developer.chrome.com/docs/extensions/mv3/intro/) chrome extension.
 
-* Install all node modules by running `npm ci` in your terminal.
-* Compile "assets" files to "dist" files by running `npm run dev`.
-
-#### 2. Install extension
-
-* Go to `chrome://extensions/` or `edge://extensions/`.
-* Toggle developper mode and click on "load unpacked extension".
-* Select the "dist" folder.
+This extension uses Webpack, see the [webpack.config.js](https://github.com/Atrimilan/chrome-extension-template/blob/master/webpack.config.js) configuration. You can use SCSS, TypeScript, Vue.js (JS & TS).
 
 ---
 
-#### 3. Additionnal informations
+### Installation
 
-* Run `npm update` to update all node modules.
-* This template follows the basics of the [Andrew Schmelyun's tutorial](https://youtu.be/kYl271X2LNA), updated to Chrome manifest v3.
+* Run `npm ci` to install all node modules
+
+### Compilation
+
+* `npm run start` to compile once _(development mode)_
+* `npm run watch` to compile each time you edit a file _(development mode)_
+* `npm run build` to build once _(production mode)_
+
+### Install the extension
+
+* Go to `chrome://extensions/` or `edge://extensions/`
+* Toggle developper mode and click on "load unpacked extension"
+* Select the `./dist` folder of the project
+* You can then reload each time you update your extension
